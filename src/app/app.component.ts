@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-linting';
 
+  /**
+   * constructor
+   */
+  constructor() {
+    this.newComponent();
+  }
+
+  /**
+   * test
+   */
   newComponent() {
     alert('test');
   }
