@@ -1,1 +1,23 @@
-node_modules
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/element*
+/tmp
+/out-tsc
+/src/app/*.js
+/.angular
+
+# dependencies
+**/node_modules
+/utils/logger/node_modules
+/utils/logger/.idea
+/platforms
+/utils/mongobatch/*
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/

@@ -8,8 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "eslint . --ext .ts",
-    "lint:style": "stylelint '**/*.scss'",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "stylelint": "stylelint '**/*.scss'",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "stylelint:fix": "stylelint '**/*.scss' --fix"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "eslint-config-airbnb": "^19.0.4",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
