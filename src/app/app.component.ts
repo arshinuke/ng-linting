@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,19 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ng-linting';
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    body: new FormControl('', Validators.required),
+  });
 
-  /**
-   * constructor
-   */
-  constructor() {
-    this.newComponent();
+  get f() {
+    return this.form.controls;
   }
 
-  /**
-   * test
-   */
-  newComponent() {
-    alert('test');
+  submit() {
+    console.log(this.form.value);
   }
 }
