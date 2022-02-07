@@ -1,3 +1,20 @@
 {
-  "extends": "stylelint-config-standard-scss"
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "indentation": 4,
+    "max-nesting-depth": 4,
+    "scss/at-extend-no-missing-placeholder": null,
+    "selector-no-qualifying-type": null,
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties":  ["box-orient"] }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues":  ["box"]
+      }
+    ]
+  }
 }
