@@ -18,7 +18,7 @@
     "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
     "commit-msg": "commitlint --edit \"$1\"",
     "commit": "git-cz",
-    "pre-push": "ng build && jest --verbose --coverage"
+    "pre-push": "ng build"
   },
   "private": true,
   "dependencies": {
@@ -100,8 +100,7 @@
     "*.{js,ts,json}": [
       "eslint --fix",
       "prettier --write",
-      "git add",
-      "jest --bail --findRelatedTests"
+      "git add"
     ],
     "*.{ts,html}": "eslint --cache --fix"
   },
