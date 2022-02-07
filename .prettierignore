@@ -1,0 +1,15 @@
+
+# Ignore artifacts:
+dist
+coverage
+node_modules
+
+# Ignore all config files:
+*.json
+*.md
+
+# Ignore HTML as currently it not well configurable
+*.html
+
+# Ignore images
+*.svg
