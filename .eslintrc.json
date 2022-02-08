@@ -20,8 +20,7 @@
         "eslint-plugin-jsdoc",
         "@angular-eslint/eslint-plugin",
         "@angular-eslint/eslint-plugin-template",
-        "@typescript-eslint",
-        "@typescript-eslint/tslint"
+        "@typescript-eslint"
       ],
       "extends": [
         "plugin:@angular-eslint/recommended",
@@ -213,18 +212,6 @@
             "anonymous": "never",
             "asyncArrow": "always",
             "named": "never"
-          }
-        ],
-        "@typescript-eslint/tslint/config": [
-          "error",
-          {
-            "rules": {
-              "import-spacing": true,
-              "typedef": [
-                true,
-                "call-signature"
-              ]
-            }
           }
         ],
         "import/prefer-default-export": 0,
