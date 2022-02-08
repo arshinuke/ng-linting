@@ -16,9 +16,8 @@
     "stylelint": "stylelint  '**/*.scss' --fix",
     "lint": "eslint . --ext .ts,.html --fix",
     "pre-commit": "ng build && lint-staged",
-    "pre-commit": "ng build && lint-staged",
     "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-    "commit-msg": "commitlint --edit \"$1\"",
+    "commit-msg": "commitlint --edit '$1'",
     "commit": "git-cz",
     "pre-push": "ng build"
   },
