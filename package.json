@@ -2,8 +2,7 @@
   "name": "ng-linting",
   "version": "0.0.0",
   "scripts": {
-    "prepare": "is-ci || husky install && npm run create-commit-hook",
-    "create-commit-hook": "add .husky/pre-commit \"npm run pre-commit\"",
+    "prepare": "is-ci || husky install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -15,11 +14,12 @@
     "stylelint:fix": "stylelint '**/*.scss' --fix",
     "stylelint": "stylelint  '**/*.scss' --fix",
     "lint": "eslint . --ext .ts,.html --fix",
-    "pre-commit": "ng build && lint-staged",
+    "prettier": "prettier \"src/**/*.ts\" --write",
+    "pre-commit": "lint-staged",
     "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-    "commit-msg": "commitlint --edit '$1'",
-    "commit": "git-cz",
-    "pre-push": "ng build"
+    "commit-msg": "commitlint --edit \"$1\"",
+    "pre-push": "jest --verbose --coverage",
+    "commit": "git-cz"
   },
   "private": true,
   "dependencies": {
