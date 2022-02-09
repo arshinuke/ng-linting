@@ -8,5 +8,5 @@ if (environment.production) {
     enableProdMode();
 }
 
-// testing
+// testing val
 platformBrowserDynamic().bootstrapModule(AppModule).catch();
